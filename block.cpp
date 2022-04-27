@@ -23,7 +23,7 @@ BLOCK::BLOCK(QWidget *parent, int k) : QWidget(parent)
              {99,306,99,306},
              {51,51,51,51},
              {-1}};
-    // 1LJTSZ#
+    
     memcpy(sp, map, sizeof(int)*32);
 }
 
@@ -55,7 +55,7 @@ void BLOCK::change(int k){
     kind = k;
 }
 
-// get left space to left edge of the widget
+
 int BLOCK::getPrefix(){
     int res = 4;
     int bp = sp[kind-1][rot];
