@@ -42,7 +42,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 {
     
     // close game
-    // cout << event->key() << endl;
+    
 
     switch (gamemod) {
         case start:
@@ -243,10 +243,10 @@ int MainWindow::collide(int i, int dx, int dy){
 }
 
 void MainWindow::blockAction(int i2){
-    // i2->(block,down): 0->(0,0), 1->(0,1), 2->(1,0), 3->(1,1)
+    
     int i = i2 >> 1;
     int down = i2 & 1;
-    // lose
+    
     for (int k = 3; k < X_SPACE-1; k++) if (pool->map[k][3]) {
         if (Number->getnum() > Number->getHighScore()) Number->setHighScore(Number->getnum());
         gameLose();
